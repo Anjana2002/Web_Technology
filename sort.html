@@ -1,0 +1,44 @@
+<!-- JavaScript code to sort and reverse array elements. -->
+<html>
+    <head>
+        <title>array</title>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Add elements to array</legend>
+            <input type="text" id="text1">
+            <input type="button" id="button1" value="add" onclick="add();">
+        </fieldset>
+        <br>
+        <input type="button" value="display" value='display' onclick="display();">
+        <button onclick="sort();">sort</button>
+        <button onclick="rev();">reverse</button>
+        <button onclick="desc();">descending</button>
+        <div id="result"></div>
+        <div id="names"></div>
+        <script>
+            var x=0;
+            var array=Array();
+            function add(){
+                array[x]=document.getElementById("text1").value;
+                // alert("added")
+                x++;
+                document.getElementById("text1").value='';
+            }
+            function display(){
+                document.getElementById("result").innerHTML="actual arrauy=["+array+"]";
+            }
+            function sort(){
+                array.sort();
+                document.getElementById("names").innerHTML="sorted"+array;
+            }
+            function rev(){
+                array.reverse();
+                document.getElementById("names").innerHTML="Reverse"+array;
+            }
+            function desc(){
+                array.reverse();document.getElementById("names").innerHTML ="Descending order Sorted Array:"+array;
+            }
+        </script>
+    </body>
+</html>

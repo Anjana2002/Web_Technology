@@ -1,0 +1,37 @@
+<!-- javascript program to implement animations. -->
+<html>
+    <head>
+        <title>animations</title>
+       <style>
+        #boy{
+            position: absolute;
+            text-align: center;
+            justify-content: center;
+            width:20%;
+            display: flex;
+            padding: 200px
+            
+        }
+       </style>
+       
+    </head>
+    <body>
+        <img src="images/boy.png" id="boy"/>
+        <script>
+            (function(selector){
+                let start =2;
+                let end=1500;
+                let interval = setInterval(function(){
+                    if(selector.offsetLeft>=end){
+                        start=2;
+                    }
+                    else{
+                        start+=5;
+                    }selector.style=`left: ${start}px`
+                },10);
+            })
+            (document.querySelector('#boy'))
+        </script>
+         
+    </body>
+</html>

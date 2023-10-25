@@ -1,0 +1,57 @@
+<!-- javascript program to implement an event handler. -->
+<html>
+    <head>
+        <title>Python</title>
+        <script>
+            let counter=0;
+            function less(){
+                x=document.getElementById("text"+counter);
+                x.parentNode.removeChild(x);
+                counter--;
+            }
+            const front=()=>{
+                counter++;
+                document.querySelector('#back').innerHTML+=`
+                <div id="text${counter}">
+                    <center>
+                    <dl>
+                        <dt>Course</dt>
+                        <dd>Basci python</dd>
+                        <dt>level</dt>
+                        <dd>Beginner</dd>
+                 </dl>
+                 <button onmouseover="less()">Show Less</button>
+                
+                </div>
+                </center>`;
+            }
+        </script>
+        <style>
+            .box{
+                width:50%;
+                background-color: aqua;
+                
+                padding: 20px;
+               
+            }
+            body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+        }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <center>
+                <h1>SKILL UP &nbsp;<small>Learn Without Limits</small></h1><br>
+                <img src="images/pytgon.jpeg" width="30%"/>
+                <br><h2>Introduction To Python Programming</h2>
+                <button onclick="front()">Show More</button>
+                <div id="back"></div>
+            
+        </div>
+    </center>
+    </body>
+</html>

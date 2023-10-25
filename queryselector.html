@@ -1,0 +1,43 @@
+<!-- javascript program using queryselector. -->
+<html>
+  <head>
+    <title>query selector</title>
+    <style>
+      .circle{
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        border: 5px solid rebeccapurple;
+        padding:20px
+      }
+      .fancy{
+        background-color: rebeccapurple;
+      }
+      button{
+        background-color: antiquewhite;
+        color: blueviolet;
+        width: 10%;
+        height:5%;
+        padding: 5px;
+        font-size: 10px;
+      }
+      body{
+       
+        text-align: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <center> <div class="circle"></div><br>
+    
+    <button >Toggle</button>
+    <script>
+      const circle = document.querySelector('.circle');
+      const button = document.querySelector('button');
+      button. addEventListener('click',function(){
+        circle.classList.toggle('fancy');
+      });
+    </script>
+  </body>
+</html>

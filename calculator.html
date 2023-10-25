@@ -1,0 +1,77 @@
+<!-- JavaScript code using functions to perform arithmetic operations on two numbers. -->
+<html>
+    <head>
+        <title>Calculator</title>
+        <script>
+            function addition(){
+                a=Number(document.cal.first.value);
+                b=Number(document.cal.second.value);
+                c=a+b;
+                document.cal.total.value=c;
+            }
+            function sub(){
+                a=Number(document.cal.first.value);
+                b=Number(document.cal.second.value);
+                c=a-b;
+                document.cal.total.value=c;
+            }
+            function mul(){
+                a=Number(document.cal.first.value);
+                b=Number(document.cal.second.value);
+                c=a*b;
+                document.cal.total.value=c;
+            }
+            function div(){
+                a=Number(document.cal.first.value);
+                b=Number(document.cal.second.value);
+                c=a/b;
+                document.cal.total.value=c;
+            }
+            function mod(){
+                a=Number(document.cal.first.value);
+                b=Number(document.cal.second.value);
+                c=a%b;
+                document.cal.total.value=c;
+            }
+            
+            function clearAll(){
+                document.getElementById("result").value = "";
+                document.getElementById("first").value = "";
+                document.getElementById("second").value = "";
+            }
+        </script>
+        <style>
+            #calculator{
+                width:500px;
+                background-color: bisque;
+                padding: 40px;
+            }
+            form input{
+                font-size: 200%;
+            }
+            label{
+                font-size: 200%;
+            }
+         
+        </style>
+    </head>
+    <body>
+       
+        <center>
+        <h1>Arithmetic Operation</h1>
+        <div id="calculator">
+        <form name="cal">
+            <label>Number 1:</label> <input type="text" name="first" id="first"><br><br>
+            <label>Number 1:</label><input type="text" name="second" id="second"><br><br>
+            <input type="button" value="ADD" onclick="addition();">
+            <input type="button" value="SUB" onclick="sub();">
+            <input type="button" value="MUL" onclick="mul();">
+            <input type="button" value="DIV" onclick="div();">
+            <input type="button" value="MOD" onclick="mod();">
+            <input type="button" value="CLEAR" onclick="clearAll();"><br><br>
+            <label>Number 1:</label><input type="text" name="total" id="result">
+        </form>
+    </div>
+</center>
+    </body>
+</html>

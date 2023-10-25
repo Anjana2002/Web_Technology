@@ -1,0 +1,40 @@
+<!-- web page using various CSS selectors -->
+<html>
+    <head>
+        <title>Random color generator</title>
+        <style>
+            #color{
+                font-size: 200%;
+            }
+            button{
+                width:20%;
+                padding: 10px;
+                font-size: 200%;
+            }
+            body{
+                text-align: center;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Random Color Generator</h1>
+        <div class="color-gen">
+            <p id="color"></p>
+            <button onclick="generateColor()">Generate Color</button>
+        </div>
+       
+        <script>
+            function generateColor(){
+            let color='#';
+            let digits="0123456789ABCDEF";
+            for(let i=0;i<6;i++){
+                let rand = Math.floor(Math.random()*16);
+                color+=digits[rand];
+            }
+            document.getElementById('color').innerHTML=color;
+            document.body.style.backgroundColor=color;
+        }
+        </script>
+    </body>
+</html>

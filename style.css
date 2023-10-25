@@ -1,0 +1,9 @@
+.box{
+    width: 50%;
+    color: indigo;
+    background-color: rgb(226, 199, 250);
+    position: relative;
+    padding: 20px;
+    margin:2%;
+
+}

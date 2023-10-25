@@ -1,0 +1,118 @@
+<!-- Create a form with at least 5 form elements and appropriate validation. -->
+<html>
+    <head>
+        <title>Apllication form</title>
+        <style>
+            body{
+                background-image: url(college.jpeg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            form{
+                background-color: aliceblue;
+                width:50%
+            }
+            input{
+                padding: 10px;
+                font-size: 20px;
+            }
+            input[type="text"]{
+              width: 100%;
+            }
+            input[type="date"]{
+              width: 100%;
+            }
+            th{
+                padding:10px;
+                font-size: 20px;
+            }
+            label{
+                font-size: 20px;
+            }
+            .box input{
+                padding: 2px;
+            }
+           
+          </style>
+          
+    </head>
+    <body>
+        <center>
+            <h1>Apllication Form</h1>
+        <form method="post">
+            <fieldset style="padding: 10px; width:50%">
+                <legend>Add Details</legend>
+                <table>
+                    <tr>
+                        <th> Firat Name</th><th>:</th>
+                        <td><input type="text" value="first"  name="First Name" required/></td>
+                    </tr>
+                    <tr>
+                        <th> Middle Name</th><th>:</th>
+                        <td><input type="text" value="middle"  name="middle Name" /></td>
+                    </tr>
+                    <tr>
+                        <th> Last Name</th><th>:</th>
+                        <td><input type="text" value="last"  name="last Name" required/></td>
+                    </tr>
+                    <tr>
+                        <th>Date of birth</th><th>:</th>
+                        <td><input type="date" value="dob"  required/></td>
+                    </tr>
+                    <tr>
+                        <th>Gender</th><th>:</th>
+                        <td align="center">
+                           
+                            <input type="radio" id="male" value="male" name="gender" required/> <label>Male</label>
+                         
+                            <input type="radio" id="female" value="female" name="gender" required/>  <label>feMale</label>
+                          </td>
+                    </tr>
+                    <tr>
+                        <th>Address</th><th>:</th>
+                        <td><textarea rows="4" cols="50"></textarea></td>
+                    </tr>
+                    <tr>
+                        <th>Hobbies</th><th>:</th>
+                        <td>
+                            <input type="checkbox" id="cricket" value="criclet" name="cricket" required/> <label>Cricket</label>
+                         
+                            <input type="checkbox" id="football" value="football" name="footaball" required/>  <label>footbaell</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Mobile</th><th>:</th>
+                        <td><input type="tel" minlength="10" maxlength="10"  pattern="^\d{10}$"></td>
+                    </tr>
+            </table>
+            </fieldset>
+            <fieldset style="padding: 10px; width:50%">
+                <legend>
+                    Educatinal
+                </legend>
+                <div class="box">
+                <table>
+                    <tr>
+                        <th>SI No.</th><th>Examination</th>
+                        <th>Board</th>
+                        <th>Percentage</th>
+                        <th>Year of Passing</th>
+                        <th>Upload Marlist</th>
+                    </tr>
+                    <tr>
+                    <td>1</td>
+                    <td>Class X</td>
+                    <td><input type="text" name="boardx" required></td>
+                    <td><input type="text" name="perx" required></td>
+                    <td><input type="number" min="1900" max="2099" step="1"
+                    required/></td>
+                    <td><input type="file" id="myFilex" name="filenamex" required
+                    /></td></tr>
+                </table>
+            </fieldset>
+        </div>
+        <button>Submit</button>
+        </form>
+    </center>
+    </body>
+</html>
